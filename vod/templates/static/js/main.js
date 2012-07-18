@@ -1,0 +1,29 @@
+
+$(document).ready(function(){
+	window.setInterval(refresh,1000);
+	$(".button").click(function(){
+		var opt = $(this).attr("id");
+		switch (opt){
+		case "play":
+			$(this).attr("id","pause");
+			$("#play_icon").attr("src","static/img/pause.png");
+			break;
+		case "pause":
+			$(this).attr("id","play");
+			$("#play_icon").attr("src","static/img/play.png");
+			break;
+		}
+		option(opt);
+		
+	});
+
+});
+function option(opt){
+	$.get('c/',{opt:opt});
+	refresh();
+}
+function refresh(){
+	 $.get('nowplaying/',function(nowplaying){
+		$("#nowplaying").html("<p>"+nowplaying+"</p>");
+	});
+}
