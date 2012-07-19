@@ -58,3 +58,5 @@ bin
 6）后悔药
 删除当前仓库内未受版本管理的文件：$ git clean -f
 恢复仓库到上一次的提交状态：$ git reset --hard
+
+git by anjuta
