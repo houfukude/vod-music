@@ -1,0 +1,2 @@
+cd /home/huofukude/userdata/python/django/vod-music/vod
+python manage.py runserver 0.0.0.0:8000
